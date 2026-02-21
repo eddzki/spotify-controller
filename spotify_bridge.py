@@ -25,7 +25,7 @@ while True:
             track = pb['item'].get('name', 'Unknown')
             artist = pb['item']['artists'][0].get('name', 'Unknown')
 
-            # THE FIX: Native, crash-proof character filter (No external libraries)
+           
             raw_str = f"{track} - {artist}"
             clean_str = "".join([c for c in raw_str if 31 < ord(c) < 127])
             clean_str = clean_str.replace(",", "").strip()
